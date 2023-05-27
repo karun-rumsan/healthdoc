@@ -1,5 +1,5 @@
-#Doctor need to signu UP and Login./m
-#Patient need to signu UP and Login. /n
+Doctor need to signu UP and Login.
+Patient need to signu UP and Login. 
 Login help to keep the track.
 An application where a patient can directly contact to the doctor on for the First aid if any problem occur and can’t reach to the doctor at a occured time . And can visit later for the face to face check up.
 
