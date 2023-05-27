@@ -1,0 +1,132 @@
+
+$sideNavbarDisapper:610px;
+$mobileNavbarAppear:610px;
+
+
+$sidenavbarPadding:0.7rem;
+
+$sideNavbarWidthLg:14rem;
+$sideNavbarWidthMd:10rem;
+
+$sideNavbarIconSize:1.2rem;
+$sideNavbarIconPadding:0.6rem;
+
+
+
+
+
+
+
+
+
+.navLink{
+    .active{
+        background: rgba(0, 0, 0, 0.564);
+        svg{
+            color: rgb(85,79,232);
+        }
+}
+
+    a{
+        display: flex;
+        flex: 1 1;
+        align-items: center;
+        text-decoration: none;
+        padding: $sidenavbarPadding;
+        border-radius: 8px;
+        margin-bottom: 0.6rem;
+        transition: background-color ease-in-out 300ms;
+        &:hover,&:focus{
+            background: rgb(63, 66, 79);
+            svg{
+                color: rgb(85,79,232);
+            }   
+        }
+        &:focus-visible{
+            outline: 2px solid white;
+            outline-offset: -2px;
+        }
+
+        span{
+            display: block;
+            margin-left: 0.2rem;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.771);
+            font-weight: 400;
+            transform: translateY(1px);
+        }
+        svg{
+            width: $sideNavbarIconSize;
+            height: $sideNavbarIconSize;
+            color: rgba(255, 255, 255, 0.771);
+            flex-shrink: 0;
+
+        }
+    }
+}
+
+.navContainer{
+    position:relative;
+    min-width:max-content;
+    // background: rgb(30,41,59);
+    background: black;
+    padding:0.8rem;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+        @media screen and (max-width:$sideNavbarDisapper) {
+        display: none;
+    }
+    &::-webkit-scrollbar{
+        display: none;     //
+    }
+    nav{
+        overflow-x: hidden;
+        -ms-overflow-style:none;
+        scrollbar-width: none;
+        transition: width linear 0.3s;
+        flex-shrink: 0;
+        @media screen and (max-width:768px) {
+            width: $sideNavbarWidthMd;
+        }
+    }
+    
+}
+.navSmall{
+    nav{
+        width:calc($sideNavbarIconSize + $sideNavbarIconPadding *2);
+
+    }
+    a{
+          .description{
+         opacity:0;
+         margin: 0;
+        }
+    }
+}
+.navBig{
+    nav{
+        width: $sideNavbarWidthLg;
+    }
+}
+.navControl{
+    padding:  $sideNavbarIconPadding;
+    // margin-top: 1rem;
+    cursor:pointer;
+    margin-bottom:1rem;
+    border-radius: 8px;
+    background:rgb(15,23,42);
+    line-height: 0;
+    width:min-content;
+    &:focus-visible{
+        outline: 2px solid white;
+        outline-offset: -2px;
+    }
+    svg{
+        width: $sideNavbarIconSize;
+        height: $sideNavbarIconSize;
+        color: rgba(255, 255, 255, 0.771);
+        flex-shrink: 0;
+
+    }
+}

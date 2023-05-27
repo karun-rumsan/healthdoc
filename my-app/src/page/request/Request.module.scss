@@ -1,0 +1,16 @@
+.div{
+    width: 95%;
+    // margin: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    // margin-top: 5rem;
+    padding:1rem;
+    background:rgba(90, 197, 226, 0.905);
+    // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+ }

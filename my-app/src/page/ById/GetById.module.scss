@@ -1,0 +1,135 @@
+.msgContainer{
+    padding: 1rem 2rem;
+  container-type:inline-size;
+width:80%;
+margin-left: auto;
+margin-right: auto;
+    .msgHeader{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding:10px;
+
+         .arrow{
+          color:rgb(80, 205, 227);
+          &:hover{
+             background: #f1f1f149;
+             border-radius: 5px ;
+             padding:5px;
+          }
+         }
+     
+
+    }
+    .msgBody{
+  padding:20px;
+   height:70vh;
+ 
+  margin:0;        
+  display: flex;
+  flex-direction: column;
+
+  .content{
+    overflow-y: auto;
+    overflow-x: hidden;
+    &::-webkit-scrollbar{
+        width:10px;
+      }
+      
+    &::-webkit-scrollbar-thumb {
+        background: #888; 
+    }
+    & ::-webkit-scrollbar-track {
+        background: #f1f1f1;  
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }        
+      .right{
+        color:#6FEDD6;
+          float: right;
+          width: 51%;
+    border:1px solid rgb(255, 255, 255);
+    margin-bottom: 10px;
+    border-radius: 25px 25px 0px 25px ;
+    background: rgba(245, 245, 245, 0.048);
+    text-align: right;
+
+
+
+} 
+.left{
+    color:#7149C6;
+    float: left;
+    width:51%;
+    border-radius: 25px 25px 25px 0px ;
+
+    background: rgba(245, 245, 245, 0.048);
+
+     margin-bottom: 10px;
+     border:1px solid rgb(255, 255, 255);
+}
+
+    .msg{
+        text-indent: 50px;
+    word-break: break-all;
+    padding:1rem;
+     margin: 0;
+
+}
+
+.closeFill{
+    float:left;
+    margin-top: 10px;
+    margin-left: 10px;
+   opacity: 0.2;
+
+   &:hover{
+     opacity:1;
+     color:rgb(252, 248, 248);
+     cursor:pointer;
+       background-color: red;
+   }
+}
+} 
+}
+
+
+
+    .footer{
+        display: flex;
+        flex-direction: row;
+    padding:0.8rem;
+     justify-content: center;
+     align-items: center;
+        .textInput{
+            height:50px;
+        }
+        input{
+            border:none;
+            border-radius:5px;
+
+        }
+        
+  
+       .aiSend{
+        stroke-width: 35px;
+        color:#79E0EE;
+        &:hover{
+            color: rgba(15, 85, 15, 0.595);
+            cursor: pointer;
+
+         }
+       }
+    }
+
+}
+
+
+
+/*  media queries*/
+// @media screen and (max-width:1000px) {
+//     .right{
+//         margin-left: 10px;
+//     }
+// }

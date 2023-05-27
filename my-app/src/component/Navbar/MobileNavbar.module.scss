@@ -1,0 +1,74 @@
+@use "../../style/shared";
+
+.container{
+    display: none;
+    transform: translateX(-100%);
+    transition: transform 250ms ease-in-out;
+    @media screen and (max-width: shared.$mobileNavbarAppear) {
+        display: block;
+        position: fixed;
+        z-index: 100;
+        top:0;
+        height:100vh;
+        background: rgb(30,41,59);
+        padding: 1rem;
+
+    }
+    nav{
+        width:12rem;
+        overflow-x: hidden;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        transition:width linear 0.3s;
+        flex-shrink: 0;
+        margin-top: 0.6rem;
+    }
+}
+.bg{
+    width:0vw;
+    height: 100vh;
+    position:absolute;
+    background:rgba(0,0,0,0.25);
+    top:0;
+    left:14rem;
+    transition:width 350ms linear;
+    transition-delay: 150ms;
+    pointer-events: none;
+
+}
+
+.navActive{
+    transform: translateX(0);
+    .bg{
+        width: 100vw;
+        pointer-events: all;
+    }
+}
+.FaTimes{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding:shared.$sideNavbarIconPadding;
+    border-radius: 8px;
+    margin-bottom: 0.6rem;
+    border-radius: 50%;
+    background: rgb(30, 30, 192);
+    width: min-content;
+    margin-bottom:2rem;
+    margin-top: 0.5rem;
+    cursor:pointer;
+    &:hover{
+        svg{
+            color:rgb(156, 40, 156)
+        }
+    }
+
+    svg{
+        transition:color 250ms ease-in-out;
+        width: shared.$sideNavbarIconSize;
+        height: shared.$sideNavbarIconSize;
+        color:rgba(255, 255, 255, 0.804);
+        flex-shrink: 0;
+    }
+
+}

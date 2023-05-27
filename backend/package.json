@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "medicore",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+
+  "dependencies": {
+    "@prisma/client": "^4.12.0",
+    "@quixo3/prisma-session-store": "^3.1.11",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "prisma": "^4.12.0",
+    "zod": "^3.21.4"
+  }
+}
